@@ -11,6 +11,8 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="#">マイページ</a>
+        <a class="nav-link" href="/login">ログイン</a>
+        <a class="nav-link" href="/register">登録</a>
       </div>
     </div>
   </div>
