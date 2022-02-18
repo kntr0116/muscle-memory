@@ -13,6 +13,7 @@
         <a class="nav-link" href="#">マイページ</a>
         <a class="nav-link" href="/login">ログイン</a>
         <a class="nav-link" href="/register">登録</a>
+        <a class="nav-link" href="/logout">ログアウト</a>
       </div>
     </div>
   </div>
