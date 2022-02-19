@@ -11,7 +11,6 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="#">マイページ</a>
-        <a class="nav-link" href="/add">投稿</a>
         <a class="nav-link" href="/login">ログイン</a>
         <a class="nav-link" href="/register">登録</a>
         <a class="nav-link" href="/logout">ログアウト</a>
@@ -22,16 +21,12 @@
 @endsection
 
 @section('content')
-<div class="card">
-  <div class="card-body">
-    @foreach ($items as $item)
-    <h5 class="card-title">{{$item->user_name}}</h5>
-    <p class="card-text">
-        {{$item->content}}
-    </p>
-    <i class="fa-regular fa-heart"></i>
-    @endforeach
-</div>
+<div class="form-floating">
+    <form action="/post/add" method="post">
+        @csrf
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px" name="content"></textarea>
+        <button type="submit" value="send" class="btn btn-primary">投稿する</button>
+    </form>   
 </div>
 @endsection
 
