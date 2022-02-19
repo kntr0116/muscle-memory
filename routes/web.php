@@ -25,3 +25,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('post', [PostController::class, 'index']);
+
+Route::get('/add', [PostController::class, 'add']);
+Route::post('/add', [PostController::class, 'create']);
+
+Route::get('/show', [PostController::class, 'show']);
+
+Route::get('/del', [PostController::class, 'del']);
+Route::post('/del', [PostController::class, 'remove']);

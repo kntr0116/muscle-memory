@@ -11,6 +11,7 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="#">マイページ</a>
+        <a class="nav-link" href="/add">投稿</a>
         <a class="nav-link" href="/login">ログイン</a>
         <a class="nav-link" href="/register">登録</a>
         <a class="nav-link" href="/logout">ログアウト</a>
@@ -23,16 +24,12 @@
 @section('content')
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Nagao Kentaro</h5>
-    <h6 class="card-subtitle mb-2 text-muted">@kntr0116</h6>
+    <h5 class="card-title">{{$item->user_name}}</h5>
     <p class="card-text">
-        デッドリフト 70kg 10*3<br>
-        レッグエクステンション 80kg 10*3<br>
-        インクラインダンベルベンチ 22kg 10*3<br>
-        ワンアームダンベルロー 22kg 10*3<br>
+        {{$item->content}}
     </p>
     <i class="fa-regular fa-heart"></i>
-  </div>
+</div>
 </div>
 @endsection
 
