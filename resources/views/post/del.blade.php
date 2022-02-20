@@ -22,13 +22,17 @@
 
 @section('content')
 <div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{$item->user_name}}</h5>
-    <p class="card-text">
-        {{$item->content}}
-    </p>
-    <button type="submit" value="send" class="btn btn-primary">削除する</button>
-</div>
+    <form action="/del" method="post">
+        @csrf
+        <input type="hidden" name="id" value="{{$form->id}}">
+        <div class="card-body">
+            <h5 class="card-title">{{$form->user_name}}</h5>
+            <p class="card-text">   
+            {{$form->content}}
+            </p>
+            <button type="submit" value="send" class="btn btn-primary">削除する</button>
+        </div>
+    </form>
 </div>
 @endsection
 

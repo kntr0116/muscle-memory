@@ -33,15 +33,13 @@ class PostController extends Controller
 
     public function del(Request $request)
     {
-        $id = $request->id;
-        $item = DB::table('posts')->where('id', $id)->first();
-        return view('post.del', ['item' => $item]);
+        $item = DB::table('posts')->where('id', $request->id)->first();
+        return view('post.del', ['form' => $item]);
     }
 
     public function remove(Request $request)
     {
-        $param = ['id' => $request->id];
-        DB::delete('delete from posts where id = :id', $param);
+        DB::table('posts')->where('id', $request->id)->delete();
         return redirect('/');
     }
 }
