@@ -22,7 +22,7 @@
 
 @section('content')
 <div class="form-floating">
-    <form action="/post/add" method="post">
+    <form action="/add" method="post">
         @csrf
         <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px" name="content"></textarea>
         <button type="submit" value="send" class="btn btn-primary">投稿する</button>
