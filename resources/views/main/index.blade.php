@@ -29,6 +29,7 @@
     <p class="card-text">
         {{$item->content}}
     </p>
+        <button type="submit" class="dropdown-item del-btn"><a href="/del?id={{$item->id}}">削除</a></button>
     <i class="fa-regular fa-heart"></i>
     @endforeach
 </div>
