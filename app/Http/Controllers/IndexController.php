@@ -10,7 +10,6 @@ class IndexController extends Controller
 {
     public function index(Request $request)
     {
-        $user = Auth::user();
         $items = DB::select('select * from posts');
         return view('main.index', ['items' => $items]);
     }

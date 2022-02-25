@@ -13,7 +13,7 @@
         <a class="nav-link" href="#">マイページ</a>
         <a class="nav-link" href="/add">投稿</a>
         @if (Auth::check())
-        <a class="nav-link" href="#">{{$user->name}}</a>
+        <a class="nav-link" href="#">{{Auth::user()->name}}</a>
         @else
         <a class="nav-link" href="/login">ログイン</a>
         <a class="nav-link" href="/register">登録</a>
