@@ -11,8 +11,12 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="#">マイページ</a>
+        @if (Auth::check())
+        <a class="nav-link" href="#">{{Auth::user()->name}}</a>
+        @else
         <a class="nav-link" href="/login">ログイン</a>
         <a class="nav-link" href="/register">登録</a>
+        @endif
         <a class="nav-link" href="/logout">ログアウト</a>
       </div>
     </div>
