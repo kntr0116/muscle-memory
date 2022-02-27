@@ -24,13 +24,6 @@ class PostController extends Controller
         return redirect('/');
     }
 
-    public function show(Request $request)
-    {
-        $id = $request->id;
-        $item = DB::table('posts')->where('id', $id)->first();
-        return view('post.show', ['item' => $item]);
-    }
-
     public function del(Request $request)
     {
         $item = DB::table('posts')->where('id', $request->id)->first();
