@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,8 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('post', [PostController::class, 'index']);
 
-Route::get('/add', [PostController::class, 'add']);
+Route::get('/add', [PostController::class, 'add'])
+    ->middleware('auth');
 Route::post('/add', [PostController::class, 'create']);
 
 Route::get('/del', [PostController::class, 'del']);
