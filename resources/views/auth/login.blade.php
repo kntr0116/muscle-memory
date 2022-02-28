@@ -10,10 +10,8 @@
     <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
-        <a class="nav-link" href="#">マイページ</a>
         <a class="nav-link" href="/login">ログイン</a>
         <a class="nav-link" href="/register">登録</a>
-        <a class="nav-link" href="/logout">ログアウト</a>
       </div>
     </div>
   </div>
