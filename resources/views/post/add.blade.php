@@ -10,7 +10,6 @@
     <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
-        <a class="nav-link" href="#">マイページ</a>
         @if (Auth::check())
         <a class="nav-link" href="#">{{Auth::user()->name}}</a>
         @else
