@@ -32,7 +32,11 @@
     <p class="card-text">
         {{$item->content}}
     </p>
+    @if (!Auth::user())
+    {{-- 何も表示しない --}}
+    @elseif (Auth::user()->name == $item->user_name)
         <button type="submit" class="dropdown-item del-btn"><a href="/del?id={{$item->id}}">削除</a></button>
+    @endif
     <i class="fa-regular fa-heart"></i>
     @endforeach
 </div>
