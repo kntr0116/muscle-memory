@@ -1,7 +1,7 @@
 @extends('layouts.mainapp')
 
 @section('header')
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Muscle Memory</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
 @endsection
 
 @section('footer')
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer mt-auto py-3 bg-warning">
   <div class="container">
     <span class="text-muted">copyright 2022 muscle memory</span>
   </div>
