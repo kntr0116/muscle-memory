@@ -25,28 +25,30 @@
 @endsection
 
 @section('content')
-<div class="card">
-  <div class="card-body">
-    @foreach ($items as $item)
-    <h5 class="card-title">{{$item->user_name}}</h5>
-    <p class="card-text">
-        {{$item->content}}
-    </p>
-    @if (!Auth::user())
-    {{-- 何も表示しない --}}
-    @elseif (Auth::user()->name == $item->user_name)
-        <button type="submit" class="dropdown-item del-btn"><a href="/del?id={{$item->id}}">削除</a></button>
-    @endif
-    <i class="fa-regular fa-heart"></i>
-    @endforeach
-</div>
-</div>
+@foreach ($items as $item)
+  <div class="mx-auto" style="width: 1000px;">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{$item->user_name}}</h5>
+        <p class="card-text">
+           {{$item->content}}
+        </p>
+        @if (!Auth::user())
+        {{-- 何も表示しない --}}
+        @elseif (Auth::user()->name == $item->user_name)
+            <button type="submit" class="dropdown-item del-btn"><a href="/del?id={{$item->id}}">削除</a></button>
+        @endif
+        <i class="fa-regular fa-heart"></i>
+      </div>
+    </div>
+  </dev>
+@endforeach
 @endsection
 
 @section('footer')
-<footer class="footer mt-auto py-3 bg-warning">
-  <div class="container">
-    <span class="text-muted">copyright 2022 muscle memory</span>
+<nav class="navbar fixed-bottom navbar-light bg-warning">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">copyright 2022 muscle memory</a>
   </div>
-</footer> 
+</nav>
 @endsection
