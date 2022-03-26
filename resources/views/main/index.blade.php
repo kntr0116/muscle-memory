@@ -33,6 +33,9 @@
         <p class="card-text">
            {{$item->content}}
         </p>
+        <p style="font-size: 12px;">
+          {{$item->created_at}}
+        </p>
         @if (!Auth::user())
         {{-- 何も表示しない --}}
         @elseif (Auth::user()->name == $item->user_name)
